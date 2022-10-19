@@ -64,7 +64,7 @@ const ProfileIcon = styled.img`
 
 function Feed(props) {
   // eslint-disable-next-line
-  const { _id, name, picture } = props;
+  const { _id, name, picture, description } = props;
   return (
     <Container>
       <Wrapper>
@@ -77,13 +77,11 @@ function Feed(props) {
           />{" "}
           <b style={{ marginLeft: "5px" }}>{name}</b>
         </Bio>
-        <i style={{ marginLeft: "5px" }}>Ea culpa fugiat magna duis aliqua.</i>
 
         <Image src={picture} alt="image" />
-        <span style={{ marginLeft: "5px", lineHeight: 1.5 }}>
-          Qui ullamco magna officia consequat. <br /> Sunt nostrud dolore nisi
-          irure ullamco veniam officia esse quis.
-        </span>
+        <p style={{ marginLeft: "5px", fontSize: "16px", lineHeight: 1.5 }}>
+          {description}
+        </p>
         <Actions>
           <Item>
             <Icon src={commentIcon} alt="comment" /> Like

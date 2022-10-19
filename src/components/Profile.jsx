@@ -65,7 +65,7 @@ const Button = styled.button`
 
 function Profile() {
   const [name, setName] = useState("Hrithik Ch");
-  const [occupation, setOccupation] = useState("React Developer");
+  const [occupation, setOccupation] = useState("Software Engineer");
   const [bio, setBio] = useState("Hi there, I'm Hrithik");
   return (
     <Container>

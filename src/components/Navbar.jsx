@@ -1,3 +1,4 @@
+import { ArrowUpward } from "@material-ui/icons";
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { PathContext } from "../context/PathContext";
@@ -29,10 +30,13 @@ const Button = styled.button`
 `;
 
 const Brand = styled.div`
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
   font-family: RedRock;
   color: white;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 const Actions = styled.div`
@@ -48,7 +52,7 @@ function Navbar() {
   const [path, setPath] = useContext(PathContext);
   return (
     <Wrapper>
-      <Brand onClick={() => setPath("home")}>Social Media</Brand>{" "}
+      <Brand onClick={() => setPath("home")}><ArrowUpward/>Swipe.  </Brand>{" "}
       <Actions>
         <Button border={"none"} onClick={() => setPath("profile")}>
           Profile

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/social-media/static/css/main.28c2946c.css",
+    "main.js": "/social-media/static/js/main.c35c302f.js",
+    "static/media/heart.gif": "/social-media/static/media/heart.7884917da00491377b1d.gif",
+    "static/media/speech-bubble.gif": "/social-media/static/media/speech-bubble.08e5e40fe0bb8de91a65.gif",
+    "static/media/share.gif": "/social-media/static/media/share.6d7f4d813a4319c8b650.gif",
+    "static/media/RedRock.ttf": "/social-media/static/media/RedRock.44aae7e90c8918450bb0.ttf",
+    "index.html": "/social-media/index.html",
+    "main.28c2946c.css.map": "/social-media/static/css/main.28c2946c.css.map",
+    "main.c35c302f.js.map": "/social-media/static/js/main.c35c302f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28c2946c.css",
+    "static/js/main.c35c302f.js"
+  ]
+}

@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
 import Render from "./components/Render";
+import { BoolContextProvider } from "./context/BoolContext";
+import { DataContextProvider } from "./context/DataContext";
 import { PathContextProvider } from "./context/PathContext";
 
 const Container = styled.div`
@@ -12,10 +14,14 @@ const Container = styled.div`
 function App() {
   return (
     <PathContextProvider>
-      <Container>
-        <Navbar />
-        <Render />
-      </Container>
+      <BoolContextProvider>
+        <DataContextProvider>
+          <Container>
+            <Navbar />
+            <Render />
+          </Container>
+        </DataContextProvider>
+      </BoolContextProvider>
     </PathContextProvider>
   );
 }
