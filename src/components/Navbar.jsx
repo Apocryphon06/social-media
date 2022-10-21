@@ -30,11 +30,11 @@ const Button = styled.button`
 `;
 
 const Brand = styled.div`
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
-  font-family: RedRock;
+  font-family: Consolas, Monaco, monospace;
   color: white;
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
 `;
@@ -52,7 +52,11 @@ function Navbar() {
   const [path, setPath] = useContext(PathContext);
   return (
     <Wrapper>
-      <Brand onClick={() => setPath("home")}><ArrowUpward/>Swipe.  </Brand>{" "}
+      <Brand onClick={() => setPath("home")}>
+        Sw
+        <ArrowUpward />
+        pe{" "}
+      </Brand>{" "}
       <Actions>
         <Button border={"none"} onClick={() => setPath("profile")}>
           Profile

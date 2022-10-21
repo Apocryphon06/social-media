@@ -12,7 +12,7 @@ const ProfileWrapper = styled.div`
   width: 450px;
   display: flex;
   flex-direction: column;
-  background-color: #e4e1e2;
+  border: 1px solid #dfdfdf;
   align-items: center;
   padding-top: 50px;
   border-radius: 10px;
@@ -79,6 +79,7 @@ function Profile() {
               onChange={(e) => setName(e.target.value)}
               placeholder="Hrithik Ch"
               value={name}
+              disabled
             />
           </Label>
           <Label>
@@ -95,7 +96,7 @@ function Profile() {
             <br />
             <Textarea
               rows="5"
-              placeholder="Hi there, I'm Hrithik"
+              placeholder="Hi there"
               onChange={(e) => setBio(e.target.value)}
               value={bio}
             />

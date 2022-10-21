@@ -55,6 +55,8 @@ function Form() {
   // eslint-disable-next-line
   const [data, setData] = useContext(DataContext);
   const [desc, setdesc] = useState("");
+  const [link, setLink] = useState("");
+
   return (
     <Wrapper>
       <Label>Add a short description</Label>
@@ -63,13 +65,17 @@ function Form() {
         type="text"
         placeholder="tag a location or a place"
       />
-      <Input type="file" />
+      <Input
+        type="text"
+        onChange={(e) => setLink(e.target.value)}
+        placeholder="type or paste an image link"
+      />
       <Button
         onClick={() =>
           setData((prevData) => [
             {
               _id: nanoid(),
-              picture: "https://picsum.photos/id/22/400",
+              picture: link,
               name: "Hrithik Ch",
               description: desc,
             },

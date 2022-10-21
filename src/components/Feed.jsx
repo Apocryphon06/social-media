@@ -1,23 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import commentIcon from "./ui/icons/speech-bubble.gif";
-import heartIcon from "./ui/icons/heart.gif";
-import shareIcon from "./ui/icons/share.gif";
+import { Comment, Share, ThumbUp } from "@material-ui/icons";
+import classes from "./Feed.module.css";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   @media (max-width: 768px) {
-    border-bottom: 1px solid #dfdfdf;
+    border-radius: 0;
   }
   padding-bottom: 20px;
-`;
-
-const Icon = styled.img`
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
 `;
 
 const Actions = styled.div`
@@ -33,6 +26,8 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #dfdfdf;
   }
   flex-direction: column;
   border: 1px solid #dfdfdf;
@@ -48,6 +43,11 @@ const Item = styled.span`
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 5px 25px;
+  border-radius: 10px;
+  &:hover {
+    background: #dfdfdf;
+  }
 `;
 
 const Bio = styled.div`
@@ -84,13 +84,13 @@ function Feed(props) {
         </p>
         <Actions>
           <Item>
-            <Icon src={commentIcon} alt="comment" /> Like
+            <ThumbUp className={classes.hover} /> Like
           </Item>
           <Item>
-            <Icon src={heartIcon} alt="comment" /> Comment
+            <Comment className={classes.hover} /> Comment
           </Item>
           <Item>
-            <Icon src={shareIcon} alt="comment" /> Share
+            <Share className={classes.hover} /> Share
           </Item>
         </Actions>
       </Wrapper>
