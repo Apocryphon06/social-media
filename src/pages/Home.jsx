@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import Comment from "../components/Comment";
 import Feed from "../components/Feed";
 import Form from "../components/Form";
 import Post from "../components/Post";
@@ -24,7 +25,9 @@ function Home() {
 
   return (
     <Container>
+  
       <Post />
+      <Comment/>
       {bool ? <Form /> : <></>}
       {data.map((item) => (
         <Feed
