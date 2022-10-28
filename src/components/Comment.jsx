@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  display: flex;
+  display: none;
   flex-direction: column;
 `;
 
@@ -26,11 +26,20 @@ const Button = styled.button`
   padding: 10px;
   font-size: 14px;
   cursor: pointer;
+  color: white;
+  background-color: #07635e;
+  border: 1 px solid #07635e;
+  &:hover {
+    background-color: #fff;
+    color: black;
+    border: 1 px solid black;
+  }
 `;
 
 const InputContainer = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 `;
 
 const Input = styled.input`
