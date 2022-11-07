@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import Comment from "../components/Comment";
 import Feed from "../components/Feed";
@@ -6,6 +6,7 @@ import Form from "../components/Form";
 import Post from "../components/Post";
 import { BoolContext } from "../context/BoolContext";
 import { DataContext } from "../context/DataContext";
+import axios from "axios";
 
 const Container = styled.div`
   display: flex;
@@ -23,11 +24,31 @@ function Home() {
   // eslint-disable-next-line
   const [data, setData] = useContext(DataContext);
 
+  const options = {
+    method: "GET",
+    url: "http://127.0.0.1:8000/api/jobs",
+  };
+
+  const getAllJobs = () => {
+    axios
+      .request(options)
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  };
+
+  useEffect(() => {
+    getAllJobs();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <Container>
-  
       <Post />
-      <Comment/>
+      <Comment />
       {bool ? <Form /> : <></>}
       {data.map((item) => (
         <Feed
